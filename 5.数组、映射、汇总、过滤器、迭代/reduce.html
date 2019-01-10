@@ -8,14 +8,20 @@
 </head>
 <body>
     <script>
+        //求和
         let _num = [33,55,9]
         let result = _num.reduce((previous,current,index)=>{
             return previous + current
         })
         console.log(result);
 
+        //求平均
         let result2 = _num.reduce((previous,current,index)=>{
-            if()
+            if( index + 1 === _num.length){ 
+                return (previous + current)/_num.length
+            }else{
+                return previous + current
+            }
         })
         console.log(result2);
         

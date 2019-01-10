@@ -182,7 +182,7 @@
 
 > function(a,b=5,c=3){}
 
-## 四、结构赋值
+## 四、解构赋值
 
 1. 左右两边结构必须一样
 2. 右边必须是个东西
@@ -239,4 +239,23 @@
 >​        console.log(score);
 
 ### reduce(汇总)
+
+```javascript
+        //求和
+        let _num = [33,55,9]
+        let result = _num.reduce((previous,current,index)=>{
+            return previous + current
+        })
+        console.log(result);
+
+        //求平均
+        let result2 = _num.reduce((previous,current,index)=>{
+            if( index + 1 === _num.length){ 
+                return (previous + current)/_num.length
+            }else{
+                return previous + current
+            }
+        })
+        console.log(result2);
+```
 
